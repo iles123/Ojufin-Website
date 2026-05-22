@@ -3,9 +3,10 @@ import bg from '../assets/ojufin cloth.jpg';
 import logo from '../assets/ojufin.png';
 
 const Home = () => {
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
-    const handleLinkClick = (e, targetId) => {
+    // Fixed: Added proper TypeScript types for parameters
+    const handleLinkClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
         e.preventDefault();
         setIsMenuOpen(false);
         
